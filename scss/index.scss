@@ -325,9 +325,9 @@ $font-mulish: "Mulish", sans-serif;
             border: 1px solid $dark;
             border-radius: 30px;
             padding: 13px 23px;
-            background-color: #efefef;
+            // background-color: #efefef;
             margin-bottom: 10px;
-            color: #efefef;
+            color: $dark;
           }
           button {
             width: 100%;
