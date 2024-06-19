@@ -1,0 +1,105 @@
+.header {
+  .header-information {
+    background-color: $primary;
+
+    .information-container {
+      max-width: 1440px;
+      margin: auto;
+      display: flex;
+      padding: 12px 60px;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      .information-container_contact {
+        color: $dark;
+        font-size: 12px;
+      }
+      .information-container_icons {
+        display: flex;
+        flex-flow: row nowrap;
+
+        svg {
+          margin-right: 24px;
+        }
+      }
+      .information-container_icons svg:nth-last-child(1) {
+        margin-right: 0px;
+      }
+    }
+  }
+  .header-navigation {
+    .navigation-container {
+      max-width: 1440px;
+      margin: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 50px 60px;
+      align-items: center;
+      color: $dark;
+      font-size: 14px;
+      .navigation-container_menu {
+        display: flex;
+        text-decoration: row;
+
+        .menu_item {
+          margin-right: 54px;
+          position: relative;
+          a {
+            color: $dark;
+          }
+        }
+
+        .menu_item:nth-last-child(1) {
+          margin-right: 0px;
+        }
+        .menu_item:hover > a {
+          color: $primary;
+        }
+        .technique_menu {
+          display: none;
+          position: absolute;
+          width: 180px;
+          background-color: white;
+          box-shadow: 0px 2px 7px 0px #9f9f9f40;
+          padding: 20px;
+          li {
+            color: $light;
+            padding: 15px 0px;
+          }
+          li:hover > a {
+            color: $primary;
+            padding: 15px 0px;
+          }
+        }
+        .technique:hover > .technique_menu {
+          display: block;
+        }
+      }
+      .navigation-container_lang {
+        display: flex;
+        text-decoration: row;
+        .lang {
+          margin: 0 10px;
+        }
+
+        .lang:nth-last-child(1) {
+          margin-right: 0px;
+        }
+        .lang:hover {
+          color: $primary;
+        }
+        .az {
+          font-weight: 700;
+        }
+      }
+      .navigation-container_phone {
+        display: none;
+      }
+    }
+  }
+}
+.header:hover {
+  box-shadow: 0px 2px 7px 0px #9f9f9f40;
+}
+@import "./header_media";

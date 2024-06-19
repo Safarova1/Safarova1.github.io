@@ -1,0 +1,56 @@
+// for desktop
+@media (max-width: 1100px) {
+  .footer {
+    .footer-information {
+      .footer-information_container {
+        margin-bottom: 50px;
+        gap: 80px;
+      }
+      .footer-information_icons {
+        margin-left: auto;
+        margin-right: auto;
+        .icons {
+          text-align: center;
+          img {
+            margin-right: 82px;
+          }
+          img:nth-last-child(1) {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// for tablet for phone
+@media (max-width: 900px) {
+  .footer {
+    background-image: url("/assets/images/bg/footer_phone_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    .footer-information {
+      padding: 73px 20px;
+
+      .footer-information_container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        // justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        .container_menu {
+          min-width: 87px;
+        }
+        .container_contact {
+          min-width: 185px;
+        }
+      }
+    }
+    .footer-copyright {
+      padding: 30px 20px;
+      font-size: 11px;
+    }
+  }
+}

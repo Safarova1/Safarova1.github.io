@@ -1,0 +1,124 @@
+// for desktop
+@media (max-width: 1100px) {
+  .header {
+    // box-shadow: 0px 2px 7px 0px #9f9f9f40;
+    .header-information {
+      .information-container {
+        padding: 12px 20px;
+        .information-container_contact {
+          margin-right: 42px;
+        }
+      }
+    }
+    .header-navigation {
+      .navigation-container {
+        padding: 50px 20px;
+        .navigation-container_menu {
+          .menu_item {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// for tablet for phone
+@media (max-width: 900px) {
+  .header {
+    .header-navigation {
+      .navigation-container {
+        padding: 20px 20px;
+
+        .navigation-container_menu {
+          display: none;
+        }
+        .navigation-container_lang {
+          display: none;
+        }
+        .navigation-container_phone {
+          display: block;
+          position: relative;
+          /* скрываем чекбокс */
+          .hamburger-menu {
+            #menu__toggle {
+              display: none;
+            }
+            .menu__btn {
+              .menu_open {
+                display: block;
+              }
+              .menu_close {
+                display: none;
+              }
+            }
+          }
+          .menu__box {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: 0px;
+            top: 0px;
+            z-index: 7;
+            background-color: white;
+            background-image: url("/assets/images/bg/header_phone_bg.jpg");
+            background-position: center;
+            background-size: cover;
+          }
+          #menu__toggle:checked ~ .menu__btn > .menu__box {
+            display: block;
+          }
+          #menu__toggle:checked ~ .menu__btn > .menu_open {
+            display: none;
+          }
+          #menu__toggle:checked ~ .menu__btn > .menu_close {
+            display: block;
+            position: fixed;
+            right: 20px;
+            top: 75px;
+            z-index: 10;
+          }
+          .phone-menu {
+            padding: 20px;
+
+            .list_item,
+            a {
+              margin-bottom: 25px;
+              color: $dark;
+            }
+            a:hover {
+              color: $primary;
+            }
+            .technique_menu {
+              margin-left: 40px;
+            }
+            .technique_menu li {
+              margin: 15px 0px;
+            }
+            .technique_menu li:nth-last-child(1) {
+              margin-bottom: 0px;
+              padding-bottom: 0px;
+            }
+            .technique_menu li a {
+              color: $light;
+            }
+            .technique_menu li:hover > a {
+              color: $primary;
+            }
+
+            .phone-menu_lang {
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              gap: 10px;
+              .lang_az {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
